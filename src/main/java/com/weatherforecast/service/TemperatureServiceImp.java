@@ -67,7 +67,7 @@ public class TemperatureServiceImp implements TemperatureService {
 			WeatherDetails colTemp=new WeatherDetails();
 			for (WeatherDetails col : tommarow) {
 				Double temp = Double.valueOf(col.getTemp());
-				if (coloTem == null || coloTem < temp) {
+				if (coloTem == null || coloTem > temp) {
 					coloTem = temp;
 					colTemp=col;
 				}
@@ -75,8 +75,8 @@ public class TemperatureServiceImp implements TemperatureService {
 
 			return colTemp.toString();
 		} catch (Exception e) {
-			e.printStackTrace();
-			return null;
+//			e.printStackTrace();
+			return "Please verify zip code !";
 		}
 	}
 
