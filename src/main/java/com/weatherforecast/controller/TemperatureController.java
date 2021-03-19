@@ -20,7 +20,6 @@ public class TemperatureController {
 	@Autowired
 	TemperatureService temperatureService;
 	
-	
 	@ResponseBody
 	@GetMapping("/getTommarowTemperature/{zipCode}")
 	public String getTommarowTemperatureByzip(@PathVariable String zipCode) {
